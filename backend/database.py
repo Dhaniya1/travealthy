@@ -12,6 +12,7 @@ engine = create_engine(
     SQLALCHEMY_DATABASE_URL, echo = True
 )
 
+
 sessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit= False)
 
 class Base(DeclarativeBase):
