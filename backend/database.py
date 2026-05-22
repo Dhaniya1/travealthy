@@ -13,7 +13,7 @@ engine = create_engine(
 )
 
 
-sessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit= False)
+SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit= False)
 
 class Base(DeclarativeBase):
     pass

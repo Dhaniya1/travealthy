@@ -1,8 +1,8 @@
 from sqlalchemy import String, Integer, DateTime
 from sqlalchemy.orm import Mapped, mapped_column
-from datetime import datetime
+from datetime import datetime, timezone
 
-from ..database import Base
+from database import Base
 
 class RouteSearch(Base):
     __tablename__ = "route_search"
@@ -26,5 +26,5 @@ class RouteSearch(Base):
 
     created_at: Mapped[datetime] = mapped_column(
         DateTime,
-        default=datetime.now(datetime.timezone.utc)
+        default=datetime.now(timezone.utc)
     )
